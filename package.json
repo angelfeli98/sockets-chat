@@ -1,0 +1,27 @@
+{
+  "name": "12-sockets-chats",
+  "version": "1.0.0",
+  "description": "Un chat sencillo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/angelfeli98/sockets-chat.git"
+  },
+  "author": "Felipe Regalado",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/angelfeli98/sockets-chat/issues"
+  },
+  "homepage": "https://github.com/angelfeli98/sockets-chat#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.20",
+    "mongoose-unique-validator": "^2.0.3",
+    "socket.io": "^2.3.0"
+  }
+}
