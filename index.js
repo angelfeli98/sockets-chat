@@ -1,5 +1,6 @@
 
 require('./config/config');
+require('./db/conection');
 
 const { server } = require('./app');
 

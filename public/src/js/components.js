@@ -1,8 +1,5 @@
 
-import { socketEvents } from './socket.js';
-
-
-
+import { socketEvents } from './sokcets/socket.js';
 
 
 const init = () => {
