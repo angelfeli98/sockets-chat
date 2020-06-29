@@ -41,7 +41,24 @@ const loginUser = async(req, res) => {
     }
 }
 
+const liginGoogle = (req, res) => {
+
+}
+
+const asycUpdateUser = async(id, data) => {
+    try{
+        const userUpdated = User.findByIdAndUpdate(id, data);
+        if(userUpdated)
+            return {ok : true, userUpdated};
+        else
+            return {ok : false, error : {name : 'Query error', message : 'User not found'}};
+    }catch(err){
+        return {ok : false , err: { name : 'Server errr', message : 'Internal error server' }};
+    }
+}
+
 module.exports = {
     savedUser,
-    loginUser
+    loginUser,
+    asycUpdateUser
 }

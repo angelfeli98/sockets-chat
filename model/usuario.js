@@ -33,6 +33,10 @@ const UserSchema = new Schema({
     google : {
         type : Boolean,
         default : false
+    },
+    conection_id : {
+        type : String,
+        default : null
     }
 }
 ,

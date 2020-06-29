@@ -1,0 +1,115 @@
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(26, 26, 26);
+}
+
+.row{
+    height: 54em;
+}
+
+.form{
+    padding-top: 35%;
+    padding-left: 10%;
+}
+
+form table{
+    padding-left: 10%;
+    height: 5px;
+}
+
+.th1{
+    background-color: rgb(165, 93, 93);
+    width: 97px;
+    height: 4px;
+}
+
+.th2{
+    background-color: rgb(93, 165, 97);
+    width: 97px;
+    height: 4px;
+}
+
+.th3{
+    background-color: rgb(93, 136, 165);
+    width: 97px;
+    height: 4px;
+}
+
+.th4{
+    background-color: rgb(164, 165, 93);
+    width: 97px;
+    height: 4px;
+}
+
+h1, h2, h3, p, label{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+}
+
+.wellcome{
+    padding: 30%;
+}
+
+.divWellcome{
+    height: auto;
+    width: 100%;
+}
+
+.divWellcome h1{
+    text-align: center;
+}
+
+footer{
+    height: 5.5em;
+    width: 100%;
+    text-align: center;
+}
+
+footer p{
+    padding: 30px 100px 10px ;
+}
+
+input[type=email], input[type=password] {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(48, 48, 48);
+    color: white;
+    box-sizing: border-box;
+    background-color: rgb(48, 48, 48);
+}
+
+button{
+    background-color: rgb(48, 48, 48);
+    color: white;
+    padding: 14px 20px;
+    padding-right: 30px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+}
+
+button:hover {
+    opacity: 0.8;
+  }
+
+.cancelbtn{
+    background-color: rgb(48, 48, 48);
+}
+
+form label{
+    border: 0px;
+}
+
+.column{
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+
+

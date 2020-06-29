@@ -3,11 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat | Inicio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/login.css">
+    <title>Login | Chat</title>
 </head>
 <body>
-    <h1>CHAT</h1>
-    <script src="socket.io/socket.io.js"></script>
-    <script type="module" src="./index.js"></script>
+
+    <div class="row">
+        <div class="column left">
+            <h1 class="wellcome">Wellcome to Chat</h1>
+            <div class="divWellcome">
+                <h1>Frienship is most impotant</h1>
+            </div>
+        </div>
+        <div class="column right">
+            <div class="form">
+                <table class="tableForm">
+                    <th class="th1"></th>
+                    <th class="th2"></th>
+                    <th class="th3"></th>
+                    <th class="th4"></th>
+                </table>
+                <h1 class="title-left"> Loging </h1>
+                <form action="">
+                    <label for="formEmail">User or password</label><br>
+                    <input id="formEmail" type="email" required><br>
+                    <label for="formPassword">Password</label><br>
+                    <input id="formPassword" type = "password" required><br>
+                </form>
+                <button>Login</button>
+                <button class="logup">Logup</button><br>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p class="pFooter">AztecByte Inc 2020</p>
+    </footer>
+    <script src="socket.io/socket.io.js" ></script>
+    <script  type="module" src="./index.js"></script>
 </body>
 </html>
