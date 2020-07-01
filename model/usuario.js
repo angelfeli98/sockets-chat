@@ -37,6 +37,11 @@ const UserSchema = new Schema({
     conection_id : {
         type : String,
         default : null
+    },
+    chats : {
+        type : [Schema.Types.ObjectId],
+        ref : 'chats',
+        default : null,
     }
 }
 ,

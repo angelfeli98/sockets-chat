@@ -18,7 +18,7 @@
             </div>
         </div>
         <div class="column right">
-            <div class="form">
+            <div class="form" id="divSingIn">
                 <table class="tableForm">
                     <th class="th1"></th>
                     <th class="th2"></th>
@@ -28,12 +28,36 @@
                 <h1 class="title-left"> Sing In </h1>
                 <form action="">
                     <label for="formEmail">User or email</label><br>
-                    <input id="formEmail" type="email" required autocomplete="username"><br>
+                    <input id="formEmailSingIn" type="email" required autocomplete="username"><br>
+                    <label for="formPassword">Password</label><br>
+                    <input id="formPasswordSingIn" type = "password" required autocomplete="current-password"><br>
+                </form>
+                <button id="SignInSignIn" class="login" onclick="">Sing In</button>
+                <button id="SignUpSignIn" class="logup" onclick="" >Sign Up</button><br>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+            <div class = "form disabe" id="divSingUp">
+                <table class="tableForm">
+                    <th class="th1"></th>
+                    <th class="th2"></th>
+                    <th class="th3"></th>
+                    <th class="th4"></th>
+                </table>
+                <form action="">
+                    <label for="formUser">User</label><br>
+                    <input id="formUser" type="text" required autocomplete="username"><br>
+                    <label for="formEmail">Email</label><br>
+                    <input id="formEmail" type="email" required><br>
                     <label for="formPassword">Password</label><br>
                     <input id="formPassword" type = "password" required autocomplete="current-password"><br>
+                    <label for="formConfirPassword">Confirm password</label><br>
+                    <input id="formConfirmPassword" type = "password" required autocomplete="current-password"><br>
+                    <label for = "file">Image</label>
+                    <input id="formFile" type="file"><br>
                 </form>
-                <button class="login" onclick="">Sing In</button>
-                <button class="logup" onclick="" >Sign Up</button><br>
+                <button id="SignUpSignUp" class="login" onclick="">Sign Up</button>
                 <label>
                     <input type="checkbox" checked="checked" name="remember"> Remember me
                 </label>
@@ -43,7 +67,7 @@
     <footer>
         <p class="pFooter">AztecByte Inc 2020</p>
     </footer>
-    <div>
+    <div id="scripts">
         <script  type="module" src="./src/index.js"></script>
     </div>
 </body>

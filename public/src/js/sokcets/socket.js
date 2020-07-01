@@ -1,5 +1,5 @@
 
-
+import '../../../socket.io/socket.io.js';
 
 const socket = io();
 
@@ -14,7 +14,6 @@ const socketEvents = () => {
         console.log('Lost Conection');
     })
 }
-
 
 export{
     socketEvents
