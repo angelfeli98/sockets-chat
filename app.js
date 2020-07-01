@@ -12,7 +12,7 @@ const server = http.createServer(app);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended : false}));
-app.use(express.static(path.resolve(__dirname, 'public/src')));
+app.use(express.static(path.resolve(__dirname, 'public')));
 
 app.use('/user', api);
 

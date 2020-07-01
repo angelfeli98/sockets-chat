@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/login.css">
     <title>Login | Chat</title>
 </head>
 <body>
 
-    <div class="row">
+    <section class="row">
         <div class="column left">
-            <h1 class="wellcome">Wellcome to Chat</h1>
             <div class="divWellcome">
+                <h1 class="wellcome">Wellcome to Chat</h1>
                 <h1>Frienship is most impotant</h1>
             </div>
         </div>
@@ -24,25 +25,26 @@
                     <th class="th3"></th>
                     <th class="th4"></th>
                 </table>
-                <h1 class="title-left"> Loging </h1>
+                <h1 class="title-left"> Sing In </h1>
                 <form action="">
-                    <label for="formEmail">User or password</label><br>
-                    <input id="formEmail" type="email" required><br>
+                    <label for="formEmail">User or email</label><br>
+                    <input id="formEmail" type="email" required autocomplete="username"><br>
                     <label for="formPassword">Password</label><br>
-                    <input id="formPassword" type = "password" required><br>
+                    <input id="formPassword" type = "password" required autocomplete="current-password"><br>
                 </form>
-                <button>Login</button>
-                <button class="logup">Logup</button><br>
+                <button class="login" onclick="">Sing In</button>
+                <button class="logup" onclick="" >Sign Up</button><br>
                 <label>
                     <input type="checkbox" checked="checked" name="remember"> Remember me
                 </label>
             </div>
         </div>
-    </div>
+    </section>
     <footer>
         <p class="pFooter">AztecByte Inc 2020</p>
     </footer>
-    <script src="socket.io/socket.io.js" ></script>
-    <script  type="module" src="./index.js"></script>
+    <div>
+        <script  type="module" src="./src/index.js"></script>
+    </div>
 </body>
 </html>
