@@ -45,6 +45,21 @@ const liginGoogle = (req, res) => {
 
 }
 
+const getUser = async(req, res) => {
+    try{
+        const id = req.user._id;
+        const user = await User.findById(id)
+                                .populate({path : 'friend', select : 'user conection_id' });
+
+        if(user)
+            res.status(200).json({ok : true, user});
+        else
+            res.status(404).json({ok : false, err : {name : 'Query error', message : 'User not found'}});
+    }catch{
+        res.status(500).json({ok : false, err : {name : 'Server error', message : 'Server error'}});
+    }
+}
+
 const asycUpdateUser = async(id, data) => {
     try{
         const option = {new : true};
@@ -61,5 +76,6 @@ const asycUpdateUser = async(id, data) => {
 module.exports = {
     savedUser,
     loginUser,
-    asycUpdateUser
+    asycUpdateUser,
+    getUser
 }
