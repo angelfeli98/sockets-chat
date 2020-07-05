@@ -9,7 +9,6 @@
     <title>Login | Chat</title>
 </head>
 <body>
-
     <section class="row">
         <div class="column left">
             <div class="divWellcome">
@@ -26,7 +25,7 @@
                     <th class="th4"></th>
                 </table>
                 <h1 class="title-left"> Sing In </h1>
-                <form action="">
+                <form action="" method="POST">
                     <label for="formEmail">User or email</label><br>
                     <input id="formEmailSingIn" type="email" required autocomplete="username"><br>
                     <label for="formPassword">Password</label><br>
@@ -45,7 +44,7 @@
                     <th class="th3"></th>
                     <th class="th4"></th>
                 </table>
-                <form action="">
+                <form action="" method="POST">
                     <label for="formUser">User</label><br>
                     <input id="formUser" type="text" required autocomplete="username"><br>
                     <label for="formEmail">Email</label><br>
@@ -59,7 +58,7 @@
                 </form>
                 <button id="SignUpSignUp" class="login" onclick="">Sign Up</button>
                 <label>
-                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                    <input  id="remember" type="checkbox" checked="checked" name="remember"> Remember me
                 </label>
             </div>
         </div>

@@ -7,15 +7,19 @@ class Router{
     #token = null;
     #routes = {
         '/' : () => {
+            this.rederLogin();
             console.log('HOME');
             },
         '/signup' :  () => {
+            this.rederSignUp();
             console.log('SIGNUP');
         },
         '/home' : () => {
+            this.renderChat();
             console.log('CHAT');
             },
-        '/sigin' : () => {
+        '/signin' : () => {
+            this.rederLogin();
             console.log('SINGIN');
         }
     }
@@ -33,10 +37,8 @@ class Router{
     }
 
     async renderUrl(url){
-        if(this.#routes[url]){
-            window.location.hash = url;
-            this.#routes[url]();
-        }
+        const path = url.split('#')[1];
+        if(this.#routes[path]) this.#routes[path]();
         else console.log('Page not found 404');
     }
 
@@ -62,7 +64,7 @@ class Router{
     }
 
     async rederLogin(){
-
+        window.location.href = './src/views/chat.html';
         // this.#right.innerHTML = htmlRight;
         // this.#left.innerHTML = htmlLeft;
         document.getElementById('divSingIn').classList.remove('disabe');
@@ -71,6 +73,7 @@ class Router{
     }
 
     renderChat(){
+
         document.querySelector('.divWellcome').classList.add('disabe');
         document.getElementById('divSingIn').classList.add('disabe');
         document.getElementById('divSingUp').classList.add('disabe');

@@ -6,6 +6,6 @@ const Middlewares = require('../middlewares/verifyToken');
 
 app.post('/savedUser', User.savedUser);
 app.post('/login', User.loginUser);
-app.post('/token', Middlewares.valirateToken);
+app.post('/initChat', Middlewares.decodedToken);
 
 module.exports = app;

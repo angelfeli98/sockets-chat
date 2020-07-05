@@ -26,7 +26,7 @@ const loginUser = async(req, res) => {
     try{
         const userData = req.body.data;
         const providePassword = req.body.password;
-        const user = await User.findOne({$or : [{name : userData}, {email : userData}]});
+        const user = await User.findOne({$or : [{user : userData}, {email : userData}]});
         if(!!!user) res.status(400).json({ok : false, err : { name : 'login error' , message : 'wrong user or password'}});
         else{
             const passwordIsValid = bcrypt.compareSync(providePassword, user.password);
@@ -47,7 +47,8 @@ const liginGoogle = (req, res) => {
 
 const asycUpdateUser = async(id, data) => {
     try{
-        const userUpdated = User.findByIdAndUpdate(id, data);
+        const option = {new : true};
+        const userUpdated = await User.findByIdAndUpdate(id, {conection_id : data}, option);
         if(userUpdated)
             return {ok : true, userUpdated};
         else

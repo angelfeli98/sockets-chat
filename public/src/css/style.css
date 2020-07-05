@@ -1,0 +1,40 @@
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(26, 26, 26);
+    color: white;
+}
+
+#chats{
+    height: 100%;
+}
+
+section{
+    height: 100%;
+    padding-left: 40px;
+}
+
+button{
+    background-color: rgb(48, 48, 48);
+    color: white;
+    padding: 14px 20px;
+    padding-right: 20;
+    margin: 8px 0;
+    border: 1px;
+    cursor: pointer;
+    width: 10%;
+    border-color: black;
+}
+
+input[type="text"]{
+    background-color: rgb(48, 48, 48);
+    width: 50%;
+    color: white;
+    height: 41px;
+    border: 0px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
