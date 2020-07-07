@@ -51,7 +51,7 @@ const events = () => {
 
         if(data && password){
             const body = JSON.stringify({ data, password });
-            const res = await fetch('http://localhost:7070/user/login', {
+            const res = await fetch('https://chatangel98.herokuapp.com/user/login', {
                 method : 'POST',
                 headers : {
                     'Content-Type' : 'application/json'
@@ -73,7 +73,7 @@ const events = () => {
         if(user && email && password && confirmPasswod){
             if(password == confirmPasswod){
                 const body = JSON.stringify({user, email, password});
-                const data = await fetch('http://localhost:7070/user/savedUser',{
+                const data = await fetch('https://chatangel98.herokuapp.com/user/savedUser',{
                     method : 'POST',
                     headers : {
                         'Content-Type' : 'application/json'

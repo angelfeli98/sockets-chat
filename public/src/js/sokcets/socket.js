@@ -28,7 +28,7 @@ const generateGeneralChat = () => {
 const socketEvents = () => {
     socket.on('connect', async() => {
         const token = sessionStorage.getItem('token') || localStorage.getItem('token');
-        const res = await fetch('http://localhost:7070/user/initChat', {
+        const res = await fetch('https://chatangel98.herokuapp.com/user/initChat', {
             method : 'POST',
             headers : {
                 'token' : token

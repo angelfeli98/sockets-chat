@@ -2,7 +2,7 @@
 body{
     margin: 0px;
     padding: 0px;
-    background-color: rgb(26, 26, 26);
+    background-color: white;
 }
 
 .row{
@@ -47,7 +47,7 @@ form table{
 
 h1, h2, h3, p, label{
     font-family: 'Source Sans Pro', sans-serif;
-    color: white;
+    color:black;
 }
 
 .wellcome{
@@ -86,10 +86,10 @@ input[type=email], input[type=password], input[type=text]{
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid rgb(48, 48, 48);
-    color: white;
+    border: 1px solid white;
+    color: black;
     box-sizing: border-box;
-    background-color: rgb(48, 48, 48);
+    background-color: white;
 }
 
 input[type = "file"] {
@@ -104,8 +104,8 @@ input[type = "file"] {
 label[for = "file"] {
     font-size: 14px;
     font-weight: 600;
-    color: #fff;
-    background-color: rgb(48, 48, 48);
+    color: black;
+    background-color: white;
     display: inline-block;
     transition: all .5s;
     cursor: pointer;
@@ -122,8 +122,8 @@ label[for = "file"] {
 
 
 button{
-    background-color: rgb(48, 48, 48);
-    color: white;
+    background-color:white;
+    color: black;
     padding: 14px 20px;
     padding-right: 20;
     margin: 8px 0;
@@ -137,7 +137,7 @@ button:hover {
   }
 
 .cancelbtn{
-    background-color: rgb(48, 48, 48);
+    background-color: white;
 }
 
 form label{
