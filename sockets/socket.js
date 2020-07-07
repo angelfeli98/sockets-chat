@@ -13,6 +13,7 @@ io.on('connection', (client) => {
         await user.updateIdConnection();
         console.log(`${name} is into chat with connection_id: ${user.connection_id}`);
         const message = `${name} joing to the chat`;
+
         client.broadcast.emit('connectionMessage', message, User.onlineUsers);
         callback(User.onlineUsers);
     })
@@ -20,17 +21,15 @@ io.on('connection', (client) => {
     client.on('disconnect', async() => {
         const user = await User.deleteUserOnline(client.id);
         const message = `${user.user} left the chat`
-        client.broadcast.emit('connectionMessage', message);
+        client.broadcast.emit('connectionMessage', message, User.onlineUsers);
         console.log(`User disconnect ${client.id}`);
     })
 
     client.on('message', (data) => {
-        const message = makeMessage(client.id, data);
-        client.broadcast.emit('message', message);
+        client.broadcast.emit('message', data);
     })
 
     client.on('privateMessage', (data, goal) => {
-        const message = makeMessage(client.id, data);
-        client.broadcast.to(goal).emit('privateMessage', message);
+        client.broadcast.to(goal).emit('privateMessage', data, client.id);
     })
 })

@@ -69,6 +69,10 @@ body {
   color: #67757c;
   font-weight: 300; }
 
+.disable{
+  display: none;
+}
+
 html {
   position: relative;
   min-height: 100%;
